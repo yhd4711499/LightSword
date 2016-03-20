@@ -18,7 +18,7 @@ export class SpeedStream extends stream.Transform {
   constructor(speed: number) {
     super()
     
-    if (speed < 1) throw Error('can be negative speed');
+    if (speed < 1) throw Error('can't be negative speed');
     
     this.bytesPerSecond = speed * 1024;
   }
